@@ -4,6 +4,8 @@ import argparse
 import torch
 from torchvision import transforms
 from process_order import draw
+import os 
+from PIL import Image
 
 @runway.command('translate', inputs={'source_imgs': runway.image(description='input image to be translated'),}, outputs={'image': runway.image(description='output image containing the translated result')})
 def translate(learn, inputs):

@@ -9,4 +9,4 @@ build_steps:
   - apt-get install -y libboost-all-dev
   - apt-get install -y cmake
   - apt-get install ffmpeg libsm6 libxext6  -y
-  - pip install runway-python numpy torch torchvision opencv-python matplotlib
+  - pip install runway-python numpy torch torchvision opencv-python matplotlib pillow

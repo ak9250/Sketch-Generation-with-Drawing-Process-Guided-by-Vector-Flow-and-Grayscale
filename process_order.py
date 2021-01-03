@@ -17,7 +17,7 @@ from deblue import deblue
 from quicksort import *
 
 # args
-input_path = './input/your file'
+# input_path = './input/your file'
 output_path = './output' 
 
 np.random.seed(1)
@@ -37,9 +37,8 @@ random_order = False
 ETF_order = True
 process_visible = True
 
-if __name__ == '__main__': 
-  
-    file_name = os.path.basename(input_path)
+def draw(pathin): 
+    file_name = os.path.basename(pathin)
     file_name = file_name.split('.')[0]
     print(file_name)
     output_path = output_path+"/"+file_name

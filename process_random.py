@@ -226,7 +226,7 @@ if __name__ == '__main__':
             (H,W) = now.shape
             now = now[int((H-h0)/2):int((H-h0)/2)+h0, int((W-w0)/2):int((W-w0)/2)+w0]       
             result = np.minimum(now,result)           
-            cv2.imshow('step', result)
+            # cv2.imshow('step', result)
             cv2.waitKey(1)    
 
             step += 1
@@ -271,7 +271,7 @@ if __name__ == '__main__':
         edge = HistogramEqualization(edge)
 
     cv2.imwrite(output_path + '/edge.png', edge)
-    cv2.imshow("edge",edge)
+    # cv2.imshow("edge",edge)
     cv2.waitKey(0)
 
     ############# merge #############
@@ -287,7 +287,7 @@ if __name__ == '__main__':
 
     cv2.imwrite(output_path + '/result.png', result)
     # cv2.imwrite(output_path + "/process/{0:04d}.png".format(step+1), result)
-    cv2.imshow("result",result)
+    # cv2.imshow("result",result)
     cv2.waitKey(0)
     
     # deblue
@@ -300,6 +300,6 @@ if __name__ == '__main__':
     img_yuv[:,:,0] = result
     img_rgb = cv2.cvtColor(img_yuv, cv2.COLOR_YUV2BGR) 
 
-    cv2.imshow("RGB",img_rgb)
+    # cv2.imshow("RGB",img_rgb)
     cv2.waitKey(0)
     cv2.imwrite(output_path + "/result_RGB.png",img_rgb)

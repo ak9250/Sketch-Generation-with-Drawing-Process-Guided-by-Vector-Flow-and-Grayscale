@@ -46,7 +46,7 @@ def get_directions(Num_choose, dirNum, img):
 
     img_gradient = np.sqrt((imX ** 2 + imY ** 2))
     mask = (img_gradient-0.02)>0
-    cv2.imshow('mask',np.uint8(mask*255))
+    # cv2.imshow('mask',np.uint8(mask*255))
     # img_gradient = imX + imY
 
     #filter kernel size

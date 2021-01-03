@@ -35,7 +35,7 @@ def genStroke(img, dirNum, verbose = False):
     img_gradient = np.sqrt((imX ** 2 + imY ** 2))
     img_gradient = imX + imY
     if verbose == True:
-        cv2.imshow('gradient image', np.uint8(255-img_gradient*255))
+        # cv2.imshow('gradient image', np.uint8(255-img_gradient*255))
         cv2.imwrite('output/grad.jpg',np.uint8(255-img_gradient*255))
         cv2.waitKey(0)
 
@@ -73,7 +73,7 @@ def genStroke(img, dirNum, verbose = False):
         if verbose == True:
             # print(kernel[i])
             title = 'line kernel %d'%i
-            cv2.imshow( title, np.uint8(temp*255))
+            # cv2.imshow( title, np.uint8(temp*255))
             cv2.waitKey(0)
 
 #####################################################
@@ -91,7 +91,7 @@ def genStroke(img, dirNum, verbose = False):
     if verbose == True:
         for i in range(dirNum):
             title = 'response %d'%i
-            cv2.imshow(title, np.uint8(response[i,:,:]*255))
+            # cv2.imshow(title, np.uint8(response[i,:,:]*255))
             cv2.waitKey(0)
 
 
@@ -106,7 +106,7 @@ def genStroke(img, dirNum, verbose = False):
     if verbose == True:
         for i in range(dirNum):
             title = 'max_response %d'%i
-            cv2.imshow(title, np.uint8(Cs[i,:,:]*255))
+            # cv2.imshow(title, np.uint8(Cs[i,:,:]*255))
             cv2.waitKey(0)
 
 
@@ -140,6 +140,6 @@ if __name__ == '__main__':
     stroke = np.uint8(stroke*255)
 
     cv2.imwrite('output/edge.jpg',stroke)
-    cv2.imshow('stroke', stroke)
+    # cv2.imshow('stroke', stroke)
     cv2.waitKey(0)
 

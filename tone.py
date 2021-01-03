@@ -46,11 +46,11 @@ def transferTone(img):
 
     Iadjusted = np.uint8(Iadjusted) 
     
-    cv2.imshow('adjust tone', Iadjusted)
+    # cv2.imshow('adjust tone', Iadjusted)
     cv2.waitKey(0)
     J = Iadjusted
     J = cv2.blur(Iadjusted, (3, 3))
-    cv2.imshow('blurred adjust tone', J)
+    # cv2.imshow('blurred adjust tone', J)
     cv2.waitKey(1)
     return J
 

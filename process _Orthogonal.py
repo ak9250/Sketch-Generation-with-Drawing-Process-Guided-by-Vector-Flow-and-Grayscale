@@ -154,7 +154,7 @@ if __name__ == '__main__':
                             now = now[int((H-h0)/2):int((H-h0)/2)+h0, int((W-w0)/2):int((W-w0)/2)+w0]       
                             now = np.minimum(now,now_)                   
                             step += 1
-                            cv2.imshow('step', now_)
+                            # cv2.imshow('step', now_)
                             cv2.waitKey(1)       
                             now_ = now      
 
@@ -173,7 +173,7 @@ if __name__ == '__main__':
         print('total time',time_end-time_start)
         print('stoke number',step)
         cv2.imwrite(output_path + "/draw.png", now_)
-        cv2.imshow('draw', now_)
+        # cv2.imshow('draw', now_)
         cv2.waitKey(0) 
         
 
@@ -192,7 +192,7 @@ if __name__ == '__main__':
         edge = HistogramEqualization(edge)
 
     cv2.imwrite(output_path + '/edge.png', edge)
-    cv2.imshow("edge",edge)
+    # cv2.imshow("edge",edge)
     cv2.waitKey(0)
 
     ############# merge #############
@@ -207,7 +207,7 @@ if __name__ == '__main__':
     result=np.uint8(result)  
 
     cv2.imwrite(output_path + '/result.png', result)
-    cv2.imshow("result",result)
+    # cv2.imshow("result",result)
     cv2.waitKey(0)
     
     # deblue
@@ -220,7 +220,7 @@ if __name__ == '__main__':
     img_yuv[:,:,0] = result
     img_rgb = cv2.cvtColor(img_yuv, cv2.COLOR_YUV2BGR) 
 
-    cv2.imshow("RGB",img_rgb)
+    # cv2.imshow("RGB",img_rgb)
     cv2.waitKey(0)
     cv2.imwrite(output_path + "/result_RGB.png",img_rgb)
 

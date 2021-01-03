@@ -13,6 +13,6 @@ else:
     img = cv2.resize(img,(min_length,int(min_length*h/w)))
 
 cv2.imwrite(output_path + "/up.png", img)
-cv2.imshow('draw', img)
+# cv2.imshow('draw', img)
 cv2.waitKey(0) 
 

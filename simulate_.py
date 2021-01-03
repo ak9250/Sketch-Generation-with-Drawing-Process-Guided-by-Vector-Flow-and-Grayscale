@@ -142,7 +142,7 @@ if __name__ == '__main__':
     # canvas[400-int(h/2):400-int(h/2)+h,300-int(w/2):300-int(w/2)+w] = patch
     
     # cv2.imshow('Parallel', patch[:, 2*distribution.shape[0]:w-2*distribution.shape[0]])
-    cv2.imshow('Parallel', patch)
+    # cv2.imshow('Parallel', patch)
     cv2.waitKey(0)
     cv2.imwrite("D:/ECCV2020/simu_patch/Parallel4.jpg",patch)
     print("done")

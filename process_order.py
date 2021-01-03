@@ -18,26 +18,27 @@ from quicksort import *
 
 # args
 # input_path = './input/your file'
-output_path = './output' 
 
-np.random.seed(1)
-n =  10                 # Quantization order
-period = 5              # line period
-direction =  10         # num of dir
-Freq = 100              # save every（freq) lines drawn
-deepen =  1             # for edge
-transTone = False       # for Tone8
-kernel_radius = 3       # for ETF
-iter_time = 15          # for ETF
-background_dir = None   # for ETF 
-CLAHE = True
-edge_CLAHE = True
-draw_new = True
-random_order = False
-ETF_order = True
-process_visible = True
 
 def draw(pathin): 
+    output_path = './output' 
+
+    np.random.seed(1)
+    n =  10                 # Quantization order
+    period = 5              # line period
+    direction =  10         # num of dir
+    Freq = 100              # save every（freq) lines drawn
+    deepen =  1             # for edge
+    transTone = False       # for Tone8
+    kernel_radius = 3       # for ETF
+    iter_time = 15          # for ETF
+    background_dir = None   # for ETF 
+    CLAHE = True
+    edge_CLAHE = True
+    draw_new = True
+    random_order = False
+    ETF_order = True
+    process_visible = True
     file_name = os.path.basename(pathin)
     file_name = file_name.split('.')[0]
     print(file_name)

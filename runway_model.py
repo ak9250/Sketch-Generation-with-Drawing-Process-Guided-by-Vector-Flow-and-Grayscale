@@ -14,7 +14,7 @@ def translate(learn, inputs):
 
     paths = os.path.join('images','temp.jpg')
     draw(paths)
-    pathout = "./output/temp/process/result.jpg"
+    pathout = "./output/temp/result.jpg"
     img = Image.open(open(pathout, 'rb'))
     return img
 

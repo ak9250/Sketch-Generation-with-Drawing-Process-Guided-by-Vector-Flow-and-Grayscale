@@ -6,6 +6,7 @@ from torchvision import transforms
 from process_order import draw
 import os 
 from PIL import Image
+import shutil
 
 @runway.command('translate', inputs={'source_imgs': runway.image(description='input image to be translated'),}, outputs={'image': runway.image(description='output image containing the translated result')})
 def translate(learn, inputs):
@@ -16,6 +17,7 @@ def translate(learn, inputs):
     draw(paths)
     pathout = "./output/temp/result.jpg"
     img = Image.open(open(pathout, 'rb'))
+    shutil.rmtree('./output/')
     return img
 
 

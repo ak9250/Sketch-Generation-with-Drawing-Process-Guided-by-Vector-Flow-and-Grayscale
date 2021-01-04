@@ -50,13 +50,13 @@ def draw(pathin):
 
     ####### ETF #######
     time_start=time.time()
-    ETF_filter = ETF(input_path=input_path, output_path=output_path+'/mask',\
+    ETF_filter = ETF(input_path=pathin, output_path=output_path+'/mask',\
          dir_num=direction, kernel_radius=kernel_radius, iter_time=iter_time, background_dir=background_dir)
     ETF_filter.forward()
     print('ETF done')
 
 
-    input_img = cv2.imread(input_path, cv2.IMREAD_GRAYSCALE)
+    input_img = cv2.imread(pathin, cv2.IMREAD_GRAYSCALE)
     (h0,w0) = input_img.shape
     cv2.imwrite(output_path + "/input_gray.jpg", input_img)
     # if h0>w0:
@@ -326,7 +326,7 @@ def draw(pathin):
     deblue(result, output_path)
 
     # RGB
-    img_rgb_original = cv2.imread(input_path, cv2.IMREAD_COLOR)
+    img_rgb_original = cv2.imread(pathin, cv2.IMREAD_COLOR)
     cv2.imwrite(output_path + "/input.jpg", img_rgb_original)
     img_yuv = cv2.cvtColor(img_rgb_original, cv2.COLOR_BGR2YUV)
     img_yuv[:,:,0] = result

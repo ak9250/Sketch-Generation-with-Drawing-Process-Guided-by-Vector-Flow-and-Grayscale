@@ -2,17 +2,15 @@ import runway
 import numpy as np
 import argparse
 import torch
-from torchvision import transforms
 from process_order import draw
 import os 
 from PIL import Image
 import shutil
 
-@runway.command('translate', inputs={'source_imgs': runway.image(description='input image to be translated'),}, outputs={'image': runway.image(description='output image containing the translated result')})
+@runway.command('translate', inputs={'source_imgs': runway.image(description='input image to be translated'), runway.boolean(default=True),}, outputs={'image': runway.image(description='output image containing the translated result')})
 def translate(learn, inputs):
     os.makedirs('images', exist_ok=True)
     inputs['source_imgs'].save('images/temp.jpg')
-
     paths = os.path.join('images','temp.jpg')
     draw(paths)
     pathout = "./output/temp/result.jpg"
